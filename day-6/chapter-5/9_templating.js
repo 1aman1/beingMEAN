@@ -1,23 +1,20 @@
 
+const debug = require('debug')('app:startup')
 const config = require('config')
 const morgan = require('morgan')
 const express = require('express')
 const app = express()
 app.use(express.json());
 
+app.set('view engine', 'pug')
+app.set('views', './views')
 
-/**
- * export NODE_ENV=development
- * export app_password=6789
- */
 
 console.log(`using ${config.get('env')} env config`)
 if (config.get('env') === "development") {
 
-    console.log(`Password is ${config.get('mail.password')}`)
-    
     app.use(morgan('common'));
-    console.log("morgan enabled with-common flag")
+    debug("morgan enabled with-common flag")
 }
 
 /***
@@ -34,9 +31,7 @@ const is_course_valid = require('./is_course_valid')
  * GET
  */
 app.get('/', (req, resp) => {
-
-    resp.send("/ endpoint reached")
-
+    resp.render("index", {title:"My express app", message:" Application Active"})
 })
 
 app.get('/api/courses', (req, resp) => {
