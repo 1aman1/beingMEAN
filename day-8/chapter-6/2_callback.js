@@ -1,9 +1,9 @@
 console.log('first')
-getUser(1, getRepositories)
+getUser(1, getUserObj)
 console.log('second')
 
-function getRepositories(user) {
-    getRepositories(user.un, displayRepos)
+function getUserObj(user) {
+    getRepositories_2(user.un, displayRepos)
 }
 
 function displayRepos(repos) {
@@ -12,14 +12,14 @@ function displayRepos(repos) {
 
 function getUser(id, callback) {
     setTimeout(() => {
-        console.log('copied user from the database')
+        console.log('fetched user from the database')
         callback({ id: id, un: '1aman1' })
     }, 2000)
 }
 
-function getRepositories(user, callback) {
+function getRepositories_2(user, callback) {
     setTimeout(() => {
-        console.log('github API called...')
+        console.log(`${user} github API called...`)
         callback(['Data Structures', 'Apple', 'AWS'])
     }, 2000)
 }
