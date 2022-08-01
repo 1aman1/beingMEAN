@@ -1,7 +1,7 @@
 @ middleware function
 > a simple api handler can also be called as a middleware function.
 There can be one function or a chain of functions, which can either terminate or pass the control to another middleware function.
-
+ 
 @ separate files for separate custom functions
 > create a function in separate file, and export it at the bottom in same file.
 And in the main, let's say, app.js file, require it and install it, by app.use().
@@ -10,7 +10,7 @@ And in the main, let's say, app.js file, require it and install it, by app.use()
 > It parses the request body of the object, and if there is a json, It will populate request.body property
 
 @ urlencoded()
-> reads the encoded body of the request, and populate the req.body with it.
+> reads the url encoded payload of the request object, and populate the req.body with it.
 
 @ express modules or helmet or morgan
 > They are used only in need ,because they can easily add time to the request processing.
