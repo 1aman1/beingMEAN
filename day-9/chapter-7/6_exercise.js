@@ -1,4 +1,3 @@
-const { Schema, mongo } = require('mongoose')
 const mongoose = require('mongoose')
 const dbDebugger = require('debug')('app:db')
 

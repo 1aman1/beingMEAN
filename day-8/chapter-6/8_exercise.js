@@ -15,7 +15,7 @@ function getCustomer(id, callback) {
   setTimeout(() => {
     callback({
       id: 1,
-      name: 'Mosh Hamedani',
+      name: 'ken adams',
       isGold: true,
       email: 'email'
     });

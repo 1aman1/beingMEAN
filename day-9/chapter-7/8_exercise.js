@@ -1,8 +1,7 @@
-const { Schema, mongo } = require('mongoose')
 const mongoose = require('mongoose')
 const dbDebugger = require('debug')('app:db')
 
-mongoose.connect('mongodb://3.89.20.236:27017/nodedb')
+mongoose.connect('mongodb://3.94.85.60:27017/mongo-exercises')
     .then(() => dbDebugger('connected to database'))
     .catch(() => dbDebugger('Failed to connect to database'))
 
@@ -16,13 +15,13 @@ const courseSchema = new mongoose.Schema({
 });
 
 const Course = mongoose.model('courses', courseSchema);
-/.*1aman1.*/i
+
 async function getData() {
     return await Course
         .find({ isPublished: true })
         .or([
             { price: { $gte: 15 } },
-            { name: /.*by.*/i }
+            { name: /.*node.*/i }
         ])
         .lean()
         .sort({ price: -1 })
