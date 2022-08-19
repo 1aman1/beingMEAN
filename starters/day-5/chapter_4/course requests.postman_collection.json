@@ -1,0 +1,161 @@
+{
+	"info": {
+		"_postman_id": "1b79a90e-d7c0-4d75-aa1a-94b3a6c1190b",
+		"name": "course requests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{DOMAIN}}:{{PORT}}/api/courses/",
+					"host": [
+						"{{DOMAIN}}"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"api",
+						"courses",
+						""
+					]
+				},
+				"description": "GET"
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"updated course\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{DOMAIN}}:{{PORT}}/api/courses/1",
+					"host": [
+						"{{DOMAIN}}"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"api",
+						"courses",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{DOMAIN}}:{{PORT}}/api/course/10",
+					"host": [
+						"{{DOMAIN}}"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"api",
+						"course",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"new course\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{DOMAIN}}:{{PORT}}/api/courses/",
+					"host": [
+						"{{DOMAIN}}"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"api",
+						"courses",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "DOMAIN",
+			"value": "localhost",
+			"type": "default"
+		},
+		{
+			"key": "PORT",
+			"value": "6789",
+			"type": "default"
+		}
+	]
+}
