@@ -1,0 +1,28 @@
+@ middleware function
+> a simple api handler can also be called as a middleware function.
+There can be one function or a chain of functions, which can either terminate or pass the control to another middleware function.
+ 
+@ separate files for separate custom functions
+> create a function in separate file, and export it at the bottom in same file.
+And in the main, let's say, app.js file, require it and install it, by app.use().
+
+@ express.json()
+> It parses the request body of the object, and if there is a json, It will populate request.body property
+
+@ urlencoded()
+> reads the url encoded payload of the request object, and populate the req.body with it.
+
+@ express modules or helmet or morgan
+> They are used only in need ,because they can easily add time to the request processing.
+They only should be enabled when needed.
+
+@ set env variable
+> export NODE_ENV=sandbox
+
+@ set debug for the debugger module
+> export DEBUG=app:startup,app:db
+  DEBUG=app:* nodemon 8_debug.js
+
+@ template engine : html markup to the client
+> They help reduce html prep effort and they render it by themselves.
+Provided they have values mapped to the right element.
