@@ -1,7 +1,0 @@
-{
-    "name": "App with sandbox config",
-    "env": "sandbox",
-    "mail": {
-        "host": "sandbox-mail-server"
-    }
-}

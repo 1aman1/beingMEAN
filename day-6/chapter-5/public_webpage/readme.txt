@@ -1,1 +1,0 @@
-This is a readme, it could have been an apidoc.

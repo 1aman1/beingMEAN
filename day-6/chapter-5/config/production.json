@@ -1,7 +1,0 @@
-{
-    "name": "App with production config",
-    "env": "production",
-    "mail": {
-        "host": "production-mail-server"
-    }
-}

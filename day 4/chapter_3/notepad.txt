@@ -1,8 +1,0 @@
-npm and nodejs apps were developed differently, that is the reason their version come along differently.
-
-sudo npm i -g npm@latest 
-sudo npm i -g npm@8.0.0
-
-
-npm init --yes
-package.json
